@@ -14,3 +14,11 @@ model Product {
   description String
   price       Float
 }
+
+model User {
+  id       String @id @default(uuid()) @map("_id")
+  name     String
+  email    String @unique
+  password String
+  role     String
+}
